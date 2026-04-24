@@ -1,0 +1,44 @@
+services:
+  victoria-metrics:
+    image: victoriametrics/victoria-metrics:latest
+    container_name: victoria-metrics
+    restart: unless-stopped
+    ports:
+      - "8428:8428"
+    volumes:
+      - vm_data:/storage
+    command:
+      - --storageDataPath=/storage
+      - --retentionPeriod=30d
+      - --httpListenAddr=:8428
+
+  vmagent:
+    image: victoriametrics/vmagent:latest
+    container_name: vmagent
+    restart: unless-stopped
+    ports:
+      - "8429:8429"
+    volumes:
+      - ./scrape.yml:/etc/vmagent/scrape.yml:ro
+      - vmagent_data:/vmagentdata
+    command:
+      - --promscrape.config=/etc/vmagent/scrape.yml
+      - --remoteWrite.url=http://victoria-metrics:8428/api/v1/write
+      - --httpListenAddr=:8429
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-vm
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana-datasource.yml:/etc/grafana/provisioning/datasources/vm.yml:ro
+
+volumes:
+  vm_data:
+  vmagent_data:
+  grafana_data:

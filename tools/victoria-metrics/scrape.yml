@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: victoria-metrics
+    static_configs:
+      - targets: ["victoria-metrics:8428"]
+
+  - job_name: vmagent
+    static_configs:
+      - targets: ["vmagent:8429"]
+
+  # Ajoute tes cibles ici
+  # - job_name: mon-service
+  #   static_configs:
+  #     - targets: ["mon-service:9090"]

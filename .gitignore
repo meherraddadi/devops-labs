@@ -1,0 +1,18 @@
+# Données locales
+**/data/
+**/.data/
+*_data/
+
+# Secrets
+*.env
+.env.*
+secrets/
+**/secrets.yaml
+**/secret.yaml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
