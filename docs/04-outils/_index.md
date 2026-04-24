@@ -12,6 +12,7 @@ Outils qui améliorent l'expérience de travail avec Kubernetes au quotidien.
 
 - [[k8sgpt|k8sgpt — Analyse K8s par IA]]
 - [[glasskube|Glasskube — Package manager K8s]]
+- [[mirrord|Mirrord — Dev local connecté au cluster K8s]]
 
 ## Comparatif
 
@@ -19,3 +20,4 @@ Outils qui améliorent l'expérience de travail avec Kubernetes au quotidien.
 |---|---|---|
 | [[k8sgpt\|k8sgpt]] | Comprendre les erreurs K8s rapidement | CLI standalone |
 | [[glasskube\|Glasskube]] | Installer des outils K8s facilement | In-cluster operator |
+| [[mirrord\|Mirrord]] | Coder en local avec l'env du cluster | CLI binaire |

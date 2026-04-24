@@ -11,6 +11,8 @@ Cette section couvre la couche de base du lab : le cluster Kubernetes local et s
 ## Contenu
 
 - [[k3d|k3d — Cluster Kubernetes local]]
+- [[crossplane|Crossplane — Infrastructure as Code K8s-native]]
+- [[karpenter|Karpenter — Autoscaling de nœuds K8s]]
 
 ## Pourquoi un cluster local ?
 

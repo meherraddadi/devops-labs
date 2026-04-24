@@ -14,6 +14,8 @@ status: ready
 
 **CRD (Custom Resource Definition)** — Extension de l'API Kubernetes qui permet de définir ses propres types de ressources.
 
+**Crossplane** — Outil Kubernetes qui permet de gérer des ressources cloud (Azure, AWS, GCP) via des CRDs K8s. L'état désiré est décrit en YAML K8s.
+
 **CVE (Common Vulnerabilities and Exposures)** — Identifiant unique d'une vulnérabilité de sécurité connue.
 
 ## D
@@ -34,7 +36,13 @@ status: ready
 
 **Helm** — Package manager pour Kubernetes. Les packages s'appellent des "charts".
 
+## J
+
+**Jaeger** — Plateforme open source pour visualiser les traces distribuées. Reçoit les données via OTLP ou son protocole natif.
+
 ## K
+
+**Karpenter** — Autoscaler de nœuds Kubernetes. Provisionne le bon type de VM en 30-60 secondes quand des pods sont `Pending`. Intégré dans AKS via Node Auto Provisioning (NAP).
 
 **k3d** — Outil qui fait tourner k3s dans Docker pour créer des clusters Kubernetes locaux légers.
 
@@ -50,11 +58,19 @@ status: ready
 
 **MCP (Model Context Protocol)** — Protocole d'Anthropic permettant à Claude de se connecter à des outils externes (bases de données, APIs, etc.).
 
+**Mirrord** — Outil de Developer Experience qui redirige le trafic réseau, les variables d'env et les syscalls d'un process local vers un pod K8s distant. Élimine le cycle build/push/deploy pendant le développement.
+
 **Mermaid** — Syntaxe pour créer des diagrammes en Markdown. Supporté par Obsidian et GitHub.
 
 ## O
 
+**Ollama** — Runtime pour exécuter des LLMs open source (Llama, Mistral, Phi-3...) en local, sans cloud.
+
+**OpenTelemetry (OTel)** — Standard CNCF pour l'instrumentation des applications. Collecte traces, métriques et logs avec un SDK unique et le protocole OTLP.
+
 **Operator K8s** — Pattern Kubernetes qui encapsule la logique opérationnelle d'une application dans un controller.
+
+**OTLP (OpenTelemetry Protocol)** — Protocole standard pour envoyer des données d'observabilité (traces, métriques, logs) vers n'importe quel backend compatible.
 
 **Obsidian** — Éditeur de notes basé sur Markdown avec support des wiki links et visualisation des connexions.
 

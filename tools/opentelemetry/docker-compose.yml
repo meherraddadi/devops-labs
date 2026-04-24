@@ -1,0 +1,28 @@
+services:
+  # OpenTelemetry Collector — reçoit traces/métriques/logs et les route
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    container_name: otel-collector
+    restart: unless-stopped
+    command: ["--config=/etc/otel/config.yaml"]
+    ports:
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+      - "8888:8888"   # Prometheus metrics du collector
+      - "8889:8889"   # Prometheus exporter
+      - "13133:13133" # Health check
+    volumes:
+      - ./otel-config.yaml:/etc/otel/config.yaml:ro
+    depends_on:
+      - jaeger
+
+  # Jaeger — UI pour visualiser les traces
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: jaeger
+    restart: unless-stopped
+    ports:
+      - "16686:16686" # Jaeger UI
+      - "14250:14250" # gRPC collector
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true

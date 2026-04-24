@@ -13,6 +13,8 @@ Les outils de cette section permettent de **voir ce qui se passe** dans tes syst
 - [[coroot|Coroot — Observabilité automatique]]
 - [[victoria-metrics|VictoriaMetrics — Stockage métriques]]
 - [[perses|Perses — Dashboards as Code]]
+- [[opentelemetry|OpenTelemetry — Traces, métriques, logs unifiés]]
+- [[ollama|Ollama + Open WebUI — LLMs locaux]]
 
 ## Les trois piliers de l'observabilité
 
