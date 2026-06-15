@@ -29,7 +29,10 @@ docker exec ollama ollama pull llama3.2
 |---|---|---|---|
 | `llama3.2` | 2.0 GB | 4 GB | Général, rapide |
 | `mistral` | 4.1 GB | 8 GB | Raisonnement |
-| `codellama` | 3.8 GB | 8 GB | Code |
+| `qwen2.5-coder:7b` | 4.7 GB | 6 GB | **Code — meilleur rapport qualité/vitesse** |
+| `qwen2.5-coder:14b` | 9 GB | 12 GB | Code — haute qualité |
+| `deepseek-coder-v2:16b` | 9.1 GB | 12 GB | Code — raisonnement complexe |
+| `gemma3:12b` | 7.3 GB | 10 GB | Généraliste moderne |
 | `phi3` | 2.2 GB | 4 GB | Léger, efficace |
 | `nomic-embed-text` | 274 MB | 1 GB | Embeddings RAG |
 
@@ -51,3 +54,7 @@ docker exec ollama ollama list
 
 - Open WebUI : http://localhost:3001
 - Ollama API : http://localhost:11434
+
+## Cas d'usage avancé
+
+- [Claude Code CLI en mode local gratuit](claude-code-local.md) — utiliser Claude Code sans compte Anthropic, avec un LLM local via Ollama

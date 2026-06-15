@@ -1,0 +1,13 @@
+services:
+  headroom-proxy:
+    image: ghcr.io/chopratejas/headroom:latest
+    container_name: headroom-proxy
+    command: proxy --port 8787 --host 0.0.0.0
+    ports:
+      - "8787:8787"
+    environment:
+      # Passer le token depuis le shell : export ANTHROPIC_API_KEY=...
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      # Activer les stats détaillées
+      - HEADROOM_LOG_LEVEL=info
+    restart: unless-stopped

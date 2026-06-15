@@ -26,7 +26,8 @@ devops-labs/
 │   ├── crossplane/         # Infrastructure as Code K8s-native
 │   ├── mirrord/            # Dev local connecté au cluster K8s
 │   ├── opentelemetry/      # Traces + métriques + logs unifiés
-│   └── karpenter/          # Autoscaling de nœuds K8s
+│   ├── karpenter/          # Autoscaling de nœuds K8s
+│   └── headroom/           # Compression de contexte IA — réduction tokens 60-95%
 ├── docs/                   # Vault Obsidian (documentation complète)
 │   ├── 01-infrastructure/  # k3d, Crossplane, Karpenter
 │   ├── 02-observabilite/   # Coroot, VictoriaMetrics, Perses, OTel, Ollama
@@ -59,6 +60,7 @@ cd tools/victoria-metrics && docker compose up -d
 | Perses | http://localhost:8080 | Docker Compose |
 | Jaeger (traces) | http://localhost:16686 | Docker Compose |
 | Glasskube UI | http://localhost:8580 | K8s (k3d) |
+| Headroom proxy | http://localhost:8787 | Docker Compose |
 
 > ⚠️ Coroot et Perses utilisent tous deux le port 8080. Ne pas les démarrer simultanément.
 
