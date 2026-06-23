@@ -51,16 +51,16 @@ cd tools/victoria-metrics && docker compose up -d
 
 ## URLs après démarrage
 
-| Outil | URL | Type |
-|---|---|---|
-| Open WebUI (LLMs) | http://localhost:3001 | Docker Compose |
-| Coroot | http://localhost:8080 | Docker Compose |
+| Outil              | URL                        | Type           |
+| ------------------ | -------------------------- | -------------- |
+| Open WebUI (LLMs)  | http://localhost:3001      | Docker Compose |
+| Coroot             | http://localhost:8080      | Docker Compose |
 | VictoriaMetrics UI | http://localhost:8428/vmui | Docker Compose |
-| Grafana | http://localhost:3000 | Docker Compose |
-| Perses | http://localhost:8080 | Docker Compose |
-| Jaeger (traces) | http://localhost:16686 | Docker Compose |
-| Glasskube UI | http://localhost:8580 | K8s (k3d) |
-| Headroom proxy | http://localhost:8787 | Docker Compose |
+| Grafana            | http://localhost:3000      | Docker Compose |
+| Perses             | http://localhost:8080      | Docker Compose |
+| Jaeger (traces)    | http://localhost:16686     | Docker Compose |
+| Glasskube UI       | http://localhost:8580      | K8s (k3d)      |
+| Headroom proxy     | http://localhost:8787      | Docker Compose |
 
 > ⚠️ Coroot et Perses utilisent tous deux le port 8080. Ne pas les démarrer simultanément.
 
